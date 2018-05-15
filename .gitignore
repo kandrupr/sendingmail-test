@@ -1,3 +1,6 @@
 GmailAuth.js
 package.json
 /.idea
+/variables.js
+/composer.json
+/vendor/

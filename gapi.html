@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gmail API Quickstart</title>
+    <meta charset='utf-8' />
+    <script src="variables.js"></script>
+</head>
+<body>
+<p>Gmail Initialize</p>
+
+<script src="https://apis.google.com/js/api.js"></script>
+<script>
+    function start() {
+        gapi.client.init({
+            'apiKey': 'AIzaSyC8eiIpSYguqKgCw9s02cRYDiSlfSlUtBg',
+            'clientId': '337272664669-2582evtcb70p556jarfup17ig14jd56u.apps.googleusercontent.com',
+            'scope': 'https://www.googleapis.com/auth/gmail.send profile'
+        }).then(function() {
+            return gapi.client.request({
+                'path': 'https://www.googleapis.com/gmail/v1/users/me/profile'
+            })
+        }).then(function(response) {
+            console.log(response.result);
+        }, function(reason) {
+            console.log('Error: ' + reason.result.error.message);
+        });
+
+    }
+
+    gapi.load("client", start);
+</script>
+
+</body>
+</html>
