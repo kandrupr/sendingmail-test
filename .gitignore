@@ -4,3 +4,4 @@ package.json
 /variables.js
 /composer.json
 /vendor/
+/composer.lock

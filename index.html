@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    var data = {
+        "name" : "Bob Evans",
+        "email" : "benev@biscuits.com",
+        "subject" : "Increase in biscuits",
+        "message" : "More biscuits"
+    };
+    $.ajax({
+        url: "MY_URL",
+        type: "post",
+        data: data,
+        success: function (response) {
+            var json = $.parseJSON(response);
+            console.log(json);
+            console.log(json.status);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR);
+            console.log("Details: " + textStatus + "\nError:" + errorThrown);
+        }
+    });
+</script>
+
+</body>
+</html>
