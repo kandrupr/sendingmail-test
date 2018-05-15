@@ -12,9 +12,9 @@
 <script>
     function start() {
         gapi.client.init({
-            'apiKey': 'AIzaSyC8eiIpSYguqKgCw9s02cRYDiSlfSlUtBg',
-            'clientId': '337272664669-2582evtcb70p556jarfup17ig14jd56u.apps.googleusercontent.com',
-            'scope': 'https://www.googleapis.com/auth/gmail.send profile'
+            'apiKey': 'API_KEY', // Key deleted
+            'clientId': 'CLIENT_ID', // Client ID deleted
+            'scope': 'profile'
         }).then(function() {
             return gapi.client.request({
                 'path': 'https://www.googleapis.com/gmail/v1/users/me/profile'
