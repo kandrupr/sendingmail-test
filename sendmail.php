@@ -9,10 +9,10 @@ if(empty($_POST)) {
     exit(0);
 } else {
     if(array_key_exists('name', $_POST) && array_key_exists('email', $_POST) && array_key_exists('subject', $_POST) && array_key_exists('message', $_POST)) {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $subject = $_POST['subject'];
-        $message = $_POST['message'];
+        $name = strip_tags($_POST['name']);
+        $email = strip_tags($_POST['email']);
+        $subject = strip_tags($_POST['subject']);
+        $message = strip_tags($_POST['message']);
         if($name && $email && $subject && $message) {
             $mailer = new Mailer\Mailer();
             $mail = new PHPMailer(true);
