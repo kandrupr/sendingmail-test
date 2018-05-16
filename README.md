@@ -1,7 +1,7 @@
 # Sending Mail
 
 ## mailer.js
-Sends mail through node.js using nodemailer
+Sends mail through node.js using nodemailer.
 
 ## gapi.html
 Able to send e-mails through client. Unfinished due to issues with React.
