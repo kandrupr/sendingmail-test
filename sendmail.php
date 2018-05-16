@@ -2,8 +2,14 @@
 use PHPMailer\PHPMailer\PHPMailer;
 require __DIR__."/vendor/autoload.php";
 
-$success = array("status" => true);
-$fail = array("status" => "fail");
+$success = array("operation" => true);
+$fail = array("operation" => false);
+
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: PUT, GET, POST");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+header('Content-Type: application/json');
+
 if(empty($_POST)) {
     echo json_encode($fail);
     exit(0);

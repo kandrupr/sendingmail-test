@@ -14,13 +14,13 @@
         "message" : "More biscuits"
     };
     $.ajax({
-        url: "MY_URL",
+        url: "https://webdev.cse.msu.edu/~kandrupr/mailman/sendmail.php",
         type: "post",
         data: data,
         success: function (response) {
-            var json = $.parseJSON(response);
-            console.log(json);
-            console.log(json.status);
+            console.log(response);
+            console.log(response);
+            console.log(response.operation);
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(jqXHR);
